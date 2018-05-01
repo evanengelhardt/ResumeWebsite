@@ -1,3 +1,26 @@
-<p>
-  experience works!
-</p>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto" *ngFor="let experience of experiences">
+      <li class="nav-item">
+        <a class="nav-link" (click)= "getCompanyDetails(experience)">{{experience.company}}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div *ngIf="companyName">
+  <ul>
+    <li>
+      {{companyName}}
+      {{position}}
+      {{startDate}} - {{endDate}}
+      {{description}}
+    </li>
+  </ul>
+</div>

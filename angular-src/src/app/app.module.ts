@@ -8,6 +8,13 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { MainnavComponent } from './components/mainnav/mainnav.component';
 import { ContactComponent } from './components/contact/contact.component';
 
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: '', component:HomeComponent},
+  {path:'experience', component: ExperienceComponent},
+  {path: 'contact', component: ContactComponent}
+]
 
 @NgModule({
   declarations: [
@@ -18,7 +25,8 @@ import { ContactComponent } from './components/contact/contact.component';
     ContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
