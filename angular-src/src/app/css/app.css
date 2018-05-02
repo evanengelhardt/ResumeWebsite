@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.page-header-text {
+  text-align: center;
+  line-height: 200%; }
+
+.page-header-container {
+  min-height: 6rem; }
+
+.contact-background {
+  margin: 1rem 0; }
+
+.contact-container {
+  padding: 2rem 4rem;
+  line-height: 50px; }
+
+.contact-category-text {
+  color: #fffafa;
+  font-weight: bold; }
+
+.contact-category-detail {
+  margin-left: 1rem; }
+
+.bg-green {
+  background-color: #90ee90; }
+  .bg-green .page-header-text {
+    color: #fffafa !important; }

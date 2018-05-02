@@ -1,19 +1,25 @@
 <div>
   <ul *ngFor="let contact of contacts">
-    <li>
-      {{contact.name}}
-    </li>
-    <li>
-      {{contact.phone}}
-    </li>
-    <li>
-      {{contact.email}}
-    </li>
-    <li>
-      {{contact.linkedin}}
-    </li>
-    <li>
-      {{contact.github}}
-    </li>
+    <div class= "bg-green page-header-container">
+        <h3 class= "display-4 page-header-text">CONTACT INFO</h3>
+    </div>
+    <div class = "contact-container">
+      <div class = "contact-background">
+          <span class= "contact-category-text">PHONE: </span>
+          <span class="contact-category-detail">{{contact.phone}}</span>
+      </div>
+      <div class = "contact-background">
+        <span class= "contact-category-text">EMAIL: </span>
+        <span class="contact-category-detail">{{contact.email}}</span>
+      </div>
+      <div class = "contact-background">
+        <span class= "contact-category-text">LINKEDIN: </span>
+        <span class="contact-category-detail">{{contact.linkedin}}</span>
+      </div>
+      <div class = "contact-background">
+        <span class= "contact-category-text">GITHUB: </span>
+        <span class="contact-category-detail">{{contact.github}}</span>
+      </div>
+    </div>
   </ul>
 </div>
