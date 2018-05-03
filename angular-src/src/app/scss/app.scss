@@ -35,9 +35,96 @@
 }
 
 .bg-green {
-  background-color: $green;
+  background-color: lighten($green, 10);
 
   .page-header-text {
     color: get-text-color($green) !important;
   }
+}
+
+// EXPERIENCE
+
+h5 {
+  font-family: $main-text;
+}
+
+.card-body {
+  @extend .bg-green;
+
+  .text-primary {
+    color: get-text-color($green) !important;
+    font-size: 1.3rem;
+    padding-left: .75rem;
+    padding-top: .5rem
+  }
+
+  .exp-date {
+    font-size: 1.2rem;
+    padding: .75rem;
+  }
+
+  p {
+    padding: .75rem;
+    color: $off-white;
+
+  }
+}
+
+
+.card {
+    margin: 1rem 2rem;
+
+  .card-header {
+
+    height: 2.5rem;
+    border-color: $green;
+
+
+    .btn {
+      line-height: 2.5rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.bg-white{
+  background-color: $off-white;
+}
+
+.container {
+  margin: auto;
+}
+
+.section-a {
+  margin-bottom: 2rem;
+}
+
+.secondary-header-text {
+  margin: 0 0 2rem 0;;
+  text-align: center;
+  color: $dark-gray;
+  font-weight: bold;
+}
+
+.company-icons {
+  float: right;
+  padding: 1rem 2rem;
+
+  .icon-test {
+    height: 5rem;
+    margin: 2rem;
+
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 7rem;
+    }
+  }
+}
+
+// VOLUNTEER
+.section-c {
+  margin-top: 7rem;
 }

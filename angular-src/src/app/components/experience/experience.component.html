@@ -1,43 +1,127 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
 
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+<div class=" container bg-white">
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto" *ngFor="let experience of experiences">
-      <li class="nav-item">
-        <a class="nav-link" (click)= "getCompanyDetails(experience)">{{experience.company}}</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="section-b bg-secondary">
-  <div *ngIf="companyName" class ="md-col-6" style = "margin:0 60px;">
-        <h3 class= "display-4 text-light">{{companyName}}</h3>
-        <h3 class="text-primary">{{position}}</h3>
-        <h4>{{startDate}} - {{endDate}}</h4>
-        <p>
-          {{description}}
-        </p>
-  </div>
-</div>
-
-<div class="accordion" id="accordion" *ngFor = "let experience of experiences;">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
-        </button>
-      </h5>
+  <div class="section-a">
+    <div class= "bg-green page-header-container">
+        <h3 class= "display-4 page-header-text">EXPERIENCE</h3>
     </div>
+  </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+  <div class = "section-b">
+    <h3 class = "secondary-header-text">PROFESSIONAL</h3>
+    <div class = "row">
+      <div id="accordion" class = "col-md-6">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" (click)= "getCompanyDetails(experiences[0])" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                {{experiences[0].company}}
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <h3 class="text-primary">{{position}}</h3>
+              <h4 class="exp-date">{{startDate}} - {{endDate}}</h4>
+              <ul *ngFor = "let d of description">
+                <p >
+                  {{d}}
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" (click)= "getCompanyDetails(experiences[1])" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                {{experiences[1].company}}
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <h3 class="text-primary">{{position}}</h3>
+              <h4 class="exp-date">{{startDate}} - {{endDate}}</h4>
+              <ul *ngFor = "let d of description">
+                <p >
+                  {{d}}
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" (click)= "getCompanyDetails(experiences[2])" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                {{experiences[2].company}}
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              <h3 class="text-primary">{{position}}</h3>
+              <h4 class="exp-date">{{startDate}} - {{endDate}}</h4>
+              <ul *ngFor = "let d of description">
+                <p >
+                  {{d}}
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" (click)= "getCompanyDetails(experiences[3])" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                {{experiences[3].company}}
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+            <div class="card-body">
+              <h3 class="text-primary">{{position}}</h3>
+              <h4 class="exp-date">{{startDate}} - {{endDate}}</h4>
+              <ul *ngFor = "let d of description">
+                <p >
+                  {{d}}
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class ="col-md-6 company-icons">
+        <div class= "row">
+          <div class = "col-6">
+            <div class= "icon-test">
+              <img  src="http://www.carlogos.org/logo/General-Motors-logo-2010-3300x3300.png">
+            </div>
+          </div>
+          <div class = "col-6">
+            <div class= "icon-test">
+              <img  src="https://s3.amazonaws.com/freebiesupply/large/2x/target-logo-transparent.png">
+            </div>
+          </div>
+        </div>
+        <div class= "row">
+          <div class = "col-6">
+            <div class= "icon-test">
+              <img  src="https://i.warosu.org/data/sci/img/0080/75/1463325664380.png">
+            </div>
+          </div>
+          <div class = "col-6">
+            <div class= "icon-test flx-logo">
+              <img height="50" width = "170" src="https://prnewswire2-a.akamaihd.net/p/1893751/sp/189375100/thumbnail/entry_id/0_xdj48spi/def_height/500/def_width/500/version/100012/type/1">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="section-c">
+    <h3 class = "secondary-header-text">VOLUNTEER</h3>
   </div>
 </div>

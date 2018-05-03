@@ -23,7 +23,63 @@
 .contact-category-detail {
   margin-left: 1rem; }
 
-.bg-green {
-  background-color: #90ee90; }
-  .bg-green .page-header-text {
+.bg-green, .card-body {
+  background-color: #bcf5bc; }
+  .bg-green .page-header-text, .card-body .page-header-text {
     color: #fffafa !important; }
+
+h5 {
+  font-family: Verdana; }
+
+.card-body .text-primary {
+  color: #fffafa !important;
+  font-size: 1.3rem;
+  padding-left: .75rem;
+  padding-top: .5rem; }
+
+.card-body .exp-date {
+  font-size: 1.2rem;
+  padding: .75rem; }
+
+.card-body p {
+  padding: .75rem;
+  color: #fffafa; }
+
+.card {
+  margin: 1rem 2rem; }
+  .card .card-header {
+    height: 2.5rem;
+    border-color: #90ee90; }
+    .card .card-header .btn {
+      line-height: 2.5rem;
+      font-size: 1rem; }
+
+.bg-white {
+  background-color: #fffafa; }
+
+.container {
+  margin: auto; }
+
+.section-a {
+  margin-bottom: 2rem; }
+
+.secondary-header-text {
+  margin: 0 0 2rem 0;
+  text-align: center;
+  color: #2f4f4f;
+  font-weight: bold; }
+
+.company-icons {
+  float: right;
+  padding: 1rem 2rem; }
+  .company-icons .icon-test {
+    height: 5rem;
+    margin: 2rem; }
+    .company-icons .icon-test img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 7rem; }
+
+.section-c {
+  margin-top: 7rem; }
