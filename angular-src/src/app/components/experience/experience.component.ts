@@ -4,7 +4,8 @@ import { Experience, EXPERIENCES } from '../../../../../data/experience-data';
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.css']
+  styleUrls: ['./experience.component.css',
+              '../../css/app.css']
 })
 export class ExperienceComponent implements OnInit {
   experiences : Experience[] = EXPERIENCES;
@@ -12,7 +13,10 @@ export class ExperienceComponent implements OnInit {
   position: String;
   startDate: String;
   endDate: String;
-  description: String;
+  description: String[];
+  headingTag: String;
+  collapseTag1: String;
+  collapseTag2: String;
 
   constructor() { }
 
